@@ -1,0 +1,42 @@
+.contact {
+  padding: 4rem 2rem;
+  background-color: #f9f7f5;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-family: 'Amita', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3e3e3e;
+}
+
+.text {
+  font-family: 'Lora', serif;
+  color: #5e5e5e;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.map {
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}

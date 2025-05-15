@@ -1,0 +1,65 @@
+.services {
+  padding: 6rem 2rem;
+  background: url('/textures/linen-light.png') repeat;
+  background-color: #f9f7f5;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  font-family: 'Amita', cursive;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #3e3e3e;
+}
+
+.category {
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h3 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.75rem 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+      color: #5e5e5e;
+    }
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #7a7a7a;
+  margin-bottom: 1rem;
+}

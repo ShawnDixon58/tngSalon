@@ -1,0 +1,44 @@
+.social {
+  background-color: #3e3e3e; // dark charcoal for contrast
+  color: #f9f7f5; // soft champagne white text
+  padding: 4rem 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
+}
+
+.title {
+  font-family: 'Amita', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  
+  span {
+    font-weight: 700;
+    color: #a68b6d; // champagne accent
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 2.5rem;
+
+  a {
+    color: #f9f7f5;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #a68b6d; // champagne hover effect
+    }
+  }
+}
