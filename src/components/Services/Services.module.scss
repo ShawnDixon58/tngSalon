@@ -6,8 +6,9 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease, transform 1s ease;
+  scroll-margin-top: 80px;
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 1rem 2rem;
   }
 
   &.visible {
@@ -21,6 +22,9 @@
   font-size: 3rem;
   margin-bottom: 3rem;
   color: #3e3e3e;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .category {
@@ -34,6 +38,9 @@
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #4a4a4a;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   ul {
@@ -48,6 +55,10 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.5rem;
       color: #5e5e5e;
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+        margin: 0.75rem 0.75rem;
+      }
     }
   }
 }
@@ -55,6 +66,10 @@
 .icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #3e3e3e;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .note {

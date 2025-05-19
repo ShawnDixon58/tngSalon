@@ -3,7 +3,7 @@ import styles from './Contact.module.scss';
 
 const Contact = () => {
   return (
-    <section className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.info}>
           <h2 className={styles.title}>Contact Us</h2>
@@ -13,9 +13,7 @@ const Contact = () => {
             Bella Vista, AR 72714<br />
             (316) 308-1153
           </p>
-          {/* <p className={styles.text}>
-            Open Tuesday–Saturday <br /> 9:00 AM – 6:00 PM
-          </p> */}
+
         </div>
         <div className={styles.map}>
           <iframe

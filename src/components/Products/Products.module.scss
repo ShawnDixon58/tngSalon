@@ -1,7 +1,9 @@
 .products {
   background-color: #f9f7f5;
-  padding: 4rem 2rem;
+  padding-bottom: 4rem;
+  padding-top: 1rem;
   text-align: center;
+  scroll-margin-top: 80px;
 
   @media (max-width: 768px) {
       padding: 1rem 2rem;
@@ -47,7 +49,7 @@
 
   .imageWrapper {
     position: relative;
-
+    padding: 3px;
     &::before {
       content: '';
       position: absolute;
@@ -62,7 +64,7 @@
     .image {
       width: 100%;
       height: 260px;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
       z-index: 0;
       position: relative;

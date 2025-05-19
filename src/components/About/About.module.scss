@@ -1,6 +1,7 @@
 .about {
+  scroll-margin-top: 100px;
   position: relative;
-  height: 100vh;
+  height: 86rem;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -8,10 +9,45 @@
   justify-content: center;
   color: #fff;
   text-align: center;
-
+  flex-direction: column;
   @media (max-width: 768px) {
-    height: auto;
     flex-direction: column;
+    background-color: #f9f7f5;
+  }
+}
+.headingWrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.tagline {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  @media (max-width: 768px) {
+      color: #3e3e3e;;
+    }
+
+  span {
+    font-weight: bold;
+    color: #f7e7ce;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+      color: #f7e7ce;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.header {
+  font-family: 'Amita', cursive;
+  font-size: 3rem;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    color: #3e3e3e;
   }
 }
 
@@ -24,21 +60,7 @@
   overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 110%;
-  }
-}
-
-.video {
-  position: absolute;
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%;
-  object-fit: cover;
-
-  @media (max-width: 768px) {
-    width: 110%;
-    height: 110%;
+    display: none;
   }
 }
 
@@ -50,11 +72,9 @@
   height: 100%;
   background-color: rgba(30, 30, 30, 0.5);
   z-index: 1;
+  backdrop-filter: blur(4px);
   @media (max-width: 768px) {
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
+    display: none;
   }
 }
 
@@ -62,21 +82,128 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 2rem;
   animation: fadeInUp 1s ease-out;
+  display: flex;
+  flex-direction: row;
+  min-width: 75vw;
+  gap: 50px;
+
 
   @media (max-width: 768px) {
-    padding: 1rem 1rem 3rem;
+    min-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.personCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 600px; // or whatever fixed height looks good
+  width: 100%; // you can use max-width or min-width for control
+
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #f7e7ce;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(4px);
+  position: relative;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+.titlePhotoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 1px;
+    gap: 5px;
+  }
+}
+
+.circularPhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f7e7ce; /* champagne color border */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  margin-bottom: 1px;
+
+  @media (max-width: 768px) { 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f7e7ce; /* champagne color border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-bottom: 1px;
+  }
+}
+
+.titleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
   }
 }
 
 .title {
   font-family: 'Amita', cursive;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0px;
 
   @media (max-width: 768px) {
     font-size: 2rem;
+    margin-bottom: 0px;
+  }
+}
+
+.subtitle {
+  font-family: 'Amita', cursive;
+  font-size: 2rem;
+  margin-top: 0px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-top: 0px;
+  }
+}
+
+
+.video {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -88,8 +215,51 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    display: none;
   }
 }
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 2.5rem;
+
+  a {
+    color: #f9f7f5;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #a68b6d; // champagne hover effect
+    }
+  }
+}
+.textIcon {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.website {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #f7e7ce;
+  text-decoration: none;
+  margin-bottom: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+    color: #a68b6d;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
 
 @keyframes fadeInUp {
   from {

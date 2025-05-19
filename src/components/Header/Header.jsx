@@ -23,8 +23,7 @@ const Header = () => {
           <li><a href="#home" onClick={closeMenu}>Home</a></li>
           <li><a href="#services" onClick={closeMenu}>Services</a></li>
           <li><a href="#products" onClick={closeMenu}>Products</a></li>
-          <li><a href="#social" onClick={closeMenu}>Social Media</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#connect" onClick={closeMenu}>Connect</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
       </nav>

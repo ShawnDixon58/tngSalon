@@ -1,0 +1,67 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  padding: 2rem;
+  font-family: 'Lora', serif;
+  
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 0;
+    min-width: 150px;
+    text-align: center;
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #f7e7ce;
+    }
+
+    a {
+      display: block;
+      color: #f2f2f2;
+      text-decoration: none;
+      margin-bottom: 0.3rem;
+
+      &:hover {
+        color: #a68b6d;
+      }
+    }
+
+    p {
+      margin: 0.3rem 0;
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+
+    a {
+      color: #f2f2f2;
+
+      &:hover {
+        color: #a68b6d;
+      }
+    }
+  }
+
+  .bottomRow {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+
+    p {
+      margin: 0.3rem 0;
+    }
+  }
+}

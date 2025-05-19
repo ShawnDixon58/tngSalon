@@ -1,20 +1,23 @@
 import styles from './Products.module.scss';
+import joico from '../../assets/joico-logo.webp'
+import redken from '../../assets/redken.png'
+import olaplex from '../../assets/olaplex.png'
 
 const products = [
   {
     name: 'Moisture Shampoo',
     description: 'Hydrating shampoo ideal for dry or color-treated hair.',
-    image: '/assets/products/moisture-shampoo.jpg',
+    image: joico,
   },
   {
     name: 'Volume Spray',
     description: 'Adds lift and texture without weighing hair down.',
-    image: '/assets/products/volume-spray.jpg',
+    image: redken,
   },
   {
     name: 'Repair Mask',
     description: 'Deep-conditioning treatment for damaged hair.',
-    image: '/assets/products/repair-mask.jpg',
+    image: olaplex,
   },
 ];
 
