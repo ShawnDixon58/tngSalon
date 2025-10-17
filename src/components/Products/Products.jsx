@@ -5,27 +5,39 @@ import olaplex from '../../assets/olaplex.png'
 
 const products = [
   {
-    name: 'Moisture Shampoo',
-    description: 'Hydrating shampoo ideal for dry or color-treated hair.',
+    name: 'Joico',
+    description: 'Dedicated to preserving and enhancing hair integrity through advanced keratin technology and innovative professional care.',
     image: joico,
+    website: 'https://www.joico.com/',
   },
   {
-    name: 'Volume Spray',
-    description: 'Adds lift and texture without weighing hair down.',
+    name: 'Redken',
+    description: 'A global leader in professional haircare, powered by patented protein technology and trusted by stylists worldwide.',
     image: redken,
+    website: 'https://www.redken.com/',
   },
   {
-    name: 'Repair Mask',
-    description: 'Deep-conditioning treatment for damaged hair.',
+    name: 'Olaplex',
+    description: 'Scientifically designed to rebuild broken bonds and strengthen hair from within for healthier, more resilient results.',
     image: olaplex,
+    website: 'https://www.olaplex.com/',
   },
 ];
 
 const Products = () => {
   return (
     <section id="products" className={styles.products}>
-      <h2 className={styles.title}>Salon Products</h2>
-      <div className={styles.grid}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.badge}>
+            <span className={styles.badgeText}>Premium Products</span>
+          </div>
+          {/* <h2 className={styles.title}>Professional Hair Care</h2> */}
+          <p className={styles.subtitle}>
+            Discover our curated collection of professional-grade products for lasting results
+          </p>
+        </div>
+        <div className={styles.grid}>
         {products.map((product, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.imageWrapper}>
@@ -36,11 +48,21 @@ const Products = () => {
               />
             </div>
             <div className={styles.content}>
-              <h3 className={styles.name}>{product.name}</h3>
+              <h3 className={styles.name}>
+                <a 
+                  href={product.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={styles.productLink}
+                >
+                  {product.name}
+                </a>
+              </h3>
               <p className={styles.description}>{product.description}</p>
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

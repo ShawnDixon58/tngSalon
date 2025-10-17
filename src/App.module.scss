@@ -1,14 +1,46 @@
+/* 🎨 MODERN APP STYLES 🎨 */
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
 .app {
-  width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 }
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 }
 .logo {
   height: 6em;
