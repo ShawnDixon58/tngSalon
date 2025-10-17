@@ -1,6 +1,6 @@
 import styles from './Services.module.scss';
 import { useEffect, useRef, useState } from 'react';
-import { FaCut, FaPaintBrush, FaSpa } from 'react-icons/fa';
+import { FaCut, FaPaintBrush, FaSpa, FaGem } from 'react-icons/fa';
 
 const Services = () => {
   const sectionRef = useRef(null);
@@ -29,7 +29,16 @@ const Services = () => {
       ref={sectionRef}
       className={`${styles.services} ${isVisible ? styles.visible : ''}`}
     >
-      <h2 className={styles.heading}>Services</h2>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.badge}>
+            <span className={styles.badgeText}>Our Services</span>
+          </div>
+          {/* <h2 className={styles.title}>Elevated Beauty Experiences</h2> */}
+          <p className={styles.subtitle}>
+            Discover personalized treatments designed to enhance your natural radiance
+          </p>
+        </div>
 
       <div className={styles.category}>
         <div className={styles.icon}>
@@ -39,12 +48,16 @@ const Services = () => {
         <p className={styles.note}>Haircuts include shampoo & blowout</p>
         <ul>
           <li>
+            <span>Dry Haircut</span>
+            <span>$35</span>
+          </li>
+          <li>
             <span>Haircut Level I</span>
             <span>$42</span>
           </li>
           <li>
             <span>Haircut Level II</span>
-            <span>$48</span>
+            <span>$45</span>
           </li>
         </ul>
       </div>
@@ -60,41 +73,70 @@ const Services = () => {
         <ul>
           <li>
             <span>Color Retouch</span>
-            <span>$85</span>
+            <span>$90</span>
           </li>
           <li>
             <span>All Over Color Refresh</span>
             <span>$110</span>
           </li>
           <li>
-            <span>Partial Highlights</span>
-            <span>$120</span>
+            <span>Partial Foil</span>
+            <span>$125</span>
           </li>
           <li>
-            <span>Full Highlights</span>
-            <span>$138</span>
+            <span>Full Foil</span>
+            <span>$145</span>
           </li>
           <li>
             <span>Base with Partial HL</span>
-            <span>$138</span>
+            <span>$145</span>
           </li>
           <li>
-            <span>Babylights</span>
-            <span>$150</span>
+            <span>Partial Babylights</span>
+            <span>$145</span>
+          </li>
+          <li>
+            <span>Full Babylights</span>
+            <span>$165</span>
           </li>
           <li>
             <span>Base with Full HL</span>
-            <span>$150</span>
+            <span>$160</span>
           </li>
           <li>
             <span>Partial Balayage</span>
-            <span>$150</span>
+            <span>$160</span>
           </li>
           <li>
             <span>Full Balayage</span>
+            <span>$175</span>
+          </li>
+          <li>
+            <span>Toner or Gloss</span>
+            <span>$75</span>
+          </li>
+          <li>
+            <span>Platinum Blonde</span>
             <span>$160</span>
           </li>
         </ul>
+        </div>
+        <div className={styles.category}>
+        <div className={styles.icon}>
+          <FaGem />
+        </div>
+        <h3>Other Services</h3>
+        <ul>
+          <li>
+            <span>Blowout and Style</span>
+            <span>$35</span>
+          </li>
+          <li>
+            <span>Deep Conditioning Treatment</span>
+            <span>$50</span>
+          </li>
+          </ul>
+          </div>
         <p className={styles.note}>Extensions priced at consultation</p>
       </div>
       <div className={styles.category}>
@@ -105,9 +147,13 @@ const Services = () => {
 <ul>
   <li>Facials</li>
   <li>Dermaplaning</li>
-  <li>Eyebrow Shaping</li>
+  <li>Face and Body Waxing</li>
+  <li>Microneedling</li>
+  <li>Chemical Peels</li>
+  <li>Brow Lamination</li>
 </ul>
-<p className={styles.note}>Provided by our in-house esthetician, Jessica.</p>
+<p className={styles.note}>Esthetic Services booking link</p>
+<p className={styles.note}><a href="https://nuvemskinstudio.glossgenius.com/services">https://nuvemskinstudio.glossgenius.com/services</a></p>
 </div>
     </section>
   );
